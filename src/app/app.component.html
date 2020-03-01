@@ -1,8 +1,8 @@
 <div *ngIf="authFA.user | async as user; else showLogin">
   <h1>Hello {{ user.displayName }}!</h1>
-  <button (click)="logout()">Logout</button>
+  <button mat-button (click)="logout()">Logout</button>
 </div>
 <ng-template #showLogin>
   <p>Please login.</p>
-  <button (click)="login()">Login with Google</button>
+  <button mat-button (click)="login()">Login with Google</button>
 </ng-template>
