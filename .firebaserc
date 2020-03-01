@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "question-for-study": {
+      "hosting": {
+        "authentications-lab": [
+          "question-for-study"
+        ]
+      }
+    }
+  }
+}

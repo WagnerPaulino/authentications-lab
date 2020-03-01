@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { AngularFireAuth } from '@angular/fire/auth';
+import { auth } from 'firebase/app';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +8,13 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'authentications-lab';
+
+  constructor(public authFA: AngularFireAuth) {
+  }
+  login() {
+    this.authFA.signInWithPopup(new auth.GoogleAuthProvider());
+  }
+  logout() {
+    this.authFA.signOut();
+  }
 }
