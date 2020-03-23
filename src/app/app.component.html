@@ -4,5 +4,16 @@
 </div>
 <ng-template #showLogin>
   <p>Please login.</p>
-  <button mat-button (click)="login()">Login with Google</button>
+  <form (ngSubmit)="login(email,password)">
+    <mat-form-field>
+      <mat-label>Email</mat-label>
+      <input matInput [(ngModel)]="email" name="email">
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Password</mat-label>
+      <input matInput [(ngModel)]="password" name="password" [type]="'password'">
+    </mat-form-field>
+    <button mat-button type="submit">Login com email e senha</button>
+  </form>
+  <button mat-button (click)="loginWithGoogle()">Login com Google</button>
 </ng-template>

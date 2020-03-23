@@ -7,6 +7,7 @@ import { AppComponent } from './app.component';
 import { AngularFireModule } from '@angular/fire';
 import { environment } from 'src/environments/environment';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -17,6 +18,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     AppRoutingModule,
     AngularFireModule.initializeApp(environment.firebase),
     BrowserAnimationsModule,
+    FormsModule,
     SharedModule
   ],
   providers: [],
